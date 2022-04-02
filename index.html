@@ -9,8 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/grid.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <script src="https://kit.fontawesome.com/30deb4f549.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/30deb4f549.js" crossorigin="anonymous"></script>
     <title>Shopee</title>
@@ -19,8 +21,8 @@
 <body>
     <div class="app">
         <div class="header">
-            <div class="grid">
-                <nav class="header__navbar">
+            <div class="grid wide">
+                <nav class="header__navbar hide-on-mobile-tablet">
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item header__navbar-item--has-qr header__navbar-item--separate">
                             Tải Ứng Dụng
@@ -134,7 +136,10 @@
                 </nav>
                 <!-- header with search -->
                 <div class="header-with-search">
-                    <div class="header__logo">
+                    <label for="mobile__search-checkbox" class="header__mobile-search hide-on-pc">
+                        <i class="hide-on-pc header__mobile-search-icon fa-solid fa-magnifying-glass"></i>
+                    </label>
+                    <div class="header__logo hide-on-tablet">
                         <a href="#" class="header__logo-link">
                             <svg viewBox="0 0 192 65" class="header__logo-img">
                                 <g fill-rule="evenodd">
@@ -145,10 +150,11 @@
                             </svg>
                         </a>
                     </div>
+                    <input type="checkbox" hidden id="mobile__search-checkbox" class="header__search-checkbox">
                     <div class="header__search">
                         <div class="header__search-input-wrap">
                             <input type="text" class="header__search-input" placeholder="Tìm kiếm sản phẩm....">
-                            <!-- search hítory -->
+                            <!-- search history -->
                             <div class="header__search-history">
                                 <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
                                 <ul class="header__search-history-list">
@@ -366,10 +372,27 @@
                     </div>
                 </div>
             </div>
+            <ul class="header__sort-bar">
+                <li class="header__sort-item">
+                    <a href="" class="header__short-link">Liên Quan</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__short-link header__short-link--active">Mới Nhất</a>
+
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__short-link">Bán Chạy</a>
+
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__short-link">Giá</a>
+
+                </li>
+            </ul>
         </div>
 
         <div class="app__container">
-            <div class="grid">
+            <div class="grid wide">
                 <div class="grid__row app__content">
                     <div class="grid__column-2">
                         <nav class="category">
@@ -390,7 +413,7 @@
                         </nav>
                     </div>
                     <div class="grid__column-10">
-                        <div class="home-filter">
+                        <div class="home-filter hide-on-mobile-tablet">
                             <span class="home-filter_label">Sắp xếp theo</span>
                             <button class="btn home-filter__btn">Mới nhất</button>
                             <button class="btn home-filter__btn btn-primary">Phổ biến</button>
@@ -930,7 +953,7 @@
     </div> -->
     </div>
     <div class="footer">
-        <div class="grid">
+        <div class="grid wide">
             <div class="grid__row">
                 <div class="grid__column-2-4">
                     <h3 class="footer__heading">Chăng sóc khách hàng</h3>
@@ -1011,7 +1034,7 @@
             </div>
         </div>
         <div class="footer__bottom">
-            <div class="grid">
+            <div class="grid wide">
                 <p class="footer__text">@ 2022 - Bản quyền thuộc về Công Ty NTQ</p>
             </div>
         </div>
