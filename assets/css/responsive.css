@@ -36,9 +36,16 @@
     .header__sort-bar {
         display: flex;
     }
-    .app__container {
+
+    .app__container{
         margin-top: calc(var(--header-height) + var(--header-sort-bar-height));
+
     }
+    .app__content{
+        padding-top: 8px;
+    }
+   
+    
 }
 
 
@@ -58,6 +65,9 @@
 /* mobile */
 
 @media (max-width: 739px) {
+    .app__content{
+        margin:0 4px;
+    }
     .hide-on-mobile {
         display: none;
     }
@@ -66,6 +76,9 @@
     }
     .header__logo {
         width: unset;
+    }
+    .header__logo-img {
+        width: 125px;
     }
     .header__cart {
         width: unset;
@@ -92,6 +105,22 @@
         right: 0;
         width: 100%;
     }
+
+    .pagination-item__link{
+        --height: 28px;
+        font-size: 1.6rem;
+        min-width: 36px;
+
+    }
+
+    .pagination-item{   
+        margin: 0;
+    }
+
+    .footer__content{
+        padding: 16px;
+    }
+
     @keyframes mobileSearchSideIn {
         from {
             opacity: 0;
